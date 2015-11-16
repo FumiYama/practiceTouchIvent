@@ -40,8 +40,6 @@ class ViewController: UIViewController {
             animations: { () -> Void in
                 self.imageHere.transform = CGAffineTransformMakeScale(0.9, 0.9)
             })
-            { (Bool) -> Void in
-        }
     }
     
     override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
@@ -57,8 +55,6 @@ class ViewController: UIViewController {
             
             self.imageHere.frame.origin.x = imageHerePoint!.x + deltaX
             self.imageHere.frame.origin.y = imageHerePoint!.y + deltaY
-        } else {
-            
         }
     }
     
@@ -73,7 +69,6 @@ class ViewController: UIViewController {
             { (Bool) -> Void in
         }
     }
-
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -95,8 +90,7 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    
-    enum buttonTag: Int {
+    enum buttonTag: Int { //列挙型
         case Zero = 1, One, Two, Three, Four, Five
         static let allValues = [Zero, One, Two, Three, Four, Five]
         
@@ -107,14 +101,10 @@ class ViewController: UIViewController {
     
     func pushedButton(sender: UIButton) {
         let btag = buttonTag(rawValue: sender.tag)!
-        
-//        if btag == .Other {
-//            print("Other button pushed!")
-//        } else {
-//            print("Pushed Number is \(btag.toStr())")
-//        }
-        
-        if btag == .Zero {
+
+        switch btag {
+            
+        case .Zero:
             // バネのような動き
             UIView.animateWithDuration(2.0, // アニメーションの時間を2秒に設定
                 delay: 0.0, // 遅延時間
@@ -126,7 +116,8 @@ class ViewController: UIViewController {
                     // アニメーション完了時の処理
                 }) { (Bool) -> Void in
             }
-        } else if btag == .One { //X, Y方向にそれぞれ反転するアニメーション.
+
+        case .One: //X, Y方向にそれぞれ反転するアニメーション.
             UIView.animateWithDuration(1.0,// アニメーションの時間を2秒に設定
                 animations: { () -> Void in // アニメーション中の処理
                     self.imageHere.transform = CGAffineTransformScale(self.imageHere.transform, -1.0, 1.0) // X方向に反転用のアフィン行列作成
@@ -139,59 +130,46 @@ class ViewController: UIViewController {
                         }) { (Bool) -> Void in
                     }
                 }
-        } else if btag == .Two { //回転アニメーション
+            
+        case .Two: //回転アニメーション
             let angle:CGFloat = CGFloat(M_PI_2) // radianで回転角度を指定
         
-            UIView.animateWithDuration(2.0,
+            UIView.animateWithDuration(1.0,
                 animations: { () -> Void in
                 self.imageHere.transform = CGAffineTransformMakeRotation(angle)// 回転用のアフィン行列を生成
                 }, completion: {(Bool) -> Void in
             })
             
-        } else if btag == .Three { // 拡縮アニメーション
-            UIView.animateWithDuration(2.0, animations: { () -> Void in
+        case .Three: // 拡縮アニメーション
+            UIView.animateWithDuration(1.0, animations: { () -> Void in
                 self.imageHere.transform = CGAffineTransformMakeScale(1.5, 1.5) // 拡大用アフィン
             }) { (Bool) -> Void in
-                UIView.animateWithDuration(2.0, animations: { () -> Void in
+                UIView.animateWithDuration(0.8, animations: { () -> Void in
                     self.imageHere.transform = CGAffineTransformMakeScale(0.5, 0.5) //縮小用
                 }) { (Bool) -> Void in
-                    UIView.animateWithDuration(2.0, animations: { () -> Void in
+                    UIView.animateWithDuration(0.2, animations: { () -> Void in
                         self.imageHere.transform = CGAffineTransformMakeScale(0.6, 0.6)
                     })
                 }
             }
             
-        } else if btag == .Four { // 移動アニメーション
-//            imageHere.layer.position = CGPointMake(-30, -30)
-            
-            UIView.animateWithDuration(NSTimeInterval(CGFloat(1.0)), animations: { () -> Void in
+        case .Four: // 移動アニメーション
+            UIView.animateWithDuration(NSTimeInterval(CGFloat(0.5)), animations: { () -> Void in
                 self.imageHere.center = CGPoint(x: self.view.frame.width/4, y: self.view.frame.height/4)
                 }) { (Bool) -> Void in
-                    UIView.animateWithDuration(1.0, animations: { () -> Void in
+                    UIView.animateWithDuration(0.5, animations: { () -> Void in
                     self.imageHere.center = CGPoint(x: self.view.frame.width*3/4, y: self.view.frame.height/4)
                     })
             }
             
-        } else if btag == .Five { // 初期化
-            UIView.animateWithDuration(2.0, animations: { () -> Void in
+        case .Five: //初期化
+            UIView.animateWithDuration(1.0, animations: { () -> Void in
                 self.imageHere.center = self.view.center //位置
                 self.imageHere.transform = CGAffineTransformMakeScale(1, 1) //大きさ
                 self.imageHere.transform = CGAffineTransformMakeRotation(0) // 回転
             })
-            
         }
-//
-//        switch btag {
-//            case Zero:
-//            
-//            case One:
-//                UIView.anima
-//            case Two:
-//            break
-//            case .Other:
-//            break
-//                        
-//        }
+
     
     }
     
