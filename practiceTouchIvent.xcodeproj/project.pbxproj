@@ -14,6 +14,7 @@
 		327905C81BF97A0D00D4F0FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 327905C61BF97A0D00D4F0FC /* LaunchScreen.storyboard */; };
 		327905D31BF97A0E00D4F0FC /* practiceTouchIventTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327905D21BF97A0E00D4F0FC /* practiceTouchIventTests.swift */; };
 		327905DE1BF97A0E00D4F0FC /* practiceTouchIventUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327905DD1BF97A0E00D4F0FC /* practiceTouchIventUITests.swift */; };
+		327905EC1BF97DE700D4F0FC /* halloween-hashimotokannna.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 327905EB1BF97DE700D4F0FC /* halloween-hashimotokannna.jpg */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		327905D91BF97A0E00D4F0FC /* practiceTouchIventUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = practiceTouchIventUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		327905DD1BF97A0E00D4F0FC /* practiceTouchIventUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = practiceTouchIventUITests.swift; sourceTree = "<group>"; };
 		327905DF1BF97A0E00D4F0FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		327905EB1BF97DE700D4F0FC /* halloween-hashimotokannna.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "halloween-hashimotokannna.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 		327905BC1BF97A0D00D4F0FC /* practiceTouchIvent */ = {
 			isa = PBXGroup;
 			children = (
+				327905EB1BF97DE700D4F0FC /* halloween-hashimotokannna.jpg */,
 				327905BD1BF97A0D00D4F0FC /* AppDelegate.swift */,
 				327905BF1BF97A0D00D4F0FC /* ViewController.swift */,
 				327905C11BF97A0D00D4F0FC /* Main.storyboard */,
@@ -231,6 +234,7 @@
 				327905C81BF97A0D00D4F0FC /* LaunchScreen.storyboard in Resources */,
 				327905C51BF97A0D00D4F0FC /* Assets.xcassets in Resources */,
 				327905C31BF97A0D00D4F0FC /* Main.storyboard in Resources */,
+				327905EC1BF97DE700D4F0FC /* halloween-hashimotokannna.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
