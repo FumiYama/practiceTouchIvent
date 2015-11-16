@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>practiceTouchIvent.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>0</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>327905B91BF97A0D00D4F0FC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>327905CD1BF97A0E00D4F0FC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>327905D81BF97A0E00D4F0FC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>
